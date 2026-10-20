@@ -7,7 +7,25 @@
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
 }
 
-header.encabezado {
+main {
+    min-height: 100vh;
+}
+
+main > section > article {
+    padding: 7.5vw;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+header.portada {
     height: 40vh;
 
     &::before {
@@ -16,10 +34,10 @@ header.encabezado {
 }
 
 header.portada {
-    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 40vh;
 
     & h2 {
         position: relative;
@@ -34,6 +52,7 @@ header.portada {
 
 .galeria-before {
     position: relative;
+    background-color: black;
 
     &::before {
         position: absolute;
@@ -47,9 +66,8 @@ header.portada {
 }
 
 ul.galeria figure.galeria-before {
-    background-color: black;
-    width: 25vw;
-    height: 10vh;
+    width: 20rem;
+    height: 12rem;
 }
 
 .diapositiva-1 {
@@ -78,4 +96,11 @@ ul.galeria figure.galeria-before {
     &::before {
         background-image: var(--bg-img-galeria-5);
     }
+}
+
+ul.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
 }
