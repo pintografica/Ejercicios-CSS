@@ -343,8 +343,8 @@ ul.enlaces-pdf {
 }
 
 .pinto-transicion-color {
-    width: 25vw;
-    height: 25vw;
+    width: 50%;
+    height: 50%;
     background-color: #f55992;
     box-shadow: none;
     transition:
@@ -368,6 +368,56 @@ ul.enlaces-pdf {
     text-transform: uppercase;
 }
 
+.pinto-demo {
+    background: var(--color-logo-principal);
+    border: 1px solid #d9deea;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+
+    & li {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 2rem;
+        background: #eef2ff;
+        border-radius: 10px;
+        font-size: 0.8rem;
+        color: #55607a;
+
+        & span {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 10px;
+            background: var(--color-logo-acento);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: transform 0.5s ease;
+        }
+
+        &:hover span {
+            &.pinto-translate {
+                transform: translate(5rem, 5rem);
+                background: #54e899;
+            }
+            &.pinto-rotate {
+                transform: rotate(45deg);
+                background: #54e899;
+            }
+            &.pinto-scale {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
 /* a:hover.sobre{
   color:#fff;
   background-color: var(--color-a--hover);
