@@ -206,7 +206,8 @@ header.portada {
         padding: 1em;
         text-align: center;
         color: #fff;
-        background-color: #00000080;
+        background-color: var(--color-logo-secundario);
+        opacity: 80%;
     }
 }
 
