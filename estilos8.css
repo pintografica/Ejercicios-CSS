@@ -413,7 +413,7 @@ ul.enlaces-pdf {
             place-items: center;
             font-size: 0.75rem;
             font-weight: 700;
-            transition: transform 0.5s ease;
+            transition: transform 0.2s ease;
         }
 
         &:hover span {
