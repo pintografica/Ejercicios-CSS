@@ -2,6 +2,14 @@
     /* Colores del sitio */
     --color-a: #2b2729;
     --color-a--hover: #ff00aa80;
+    --color-logo-principal: #f55992;
+    --color-logo-secundario: #54e899;
+
+    --color-texto: #2b2729;
+    --color-logo-acento: #f797c7;
+
+    --fontfamily-titles: "Titan One", sans-serif;
+    --fontfamily-textos: "Montserrat", sans-serif;
 
     --bg-img-logo: url("assets/svg/logopintografica.svg");
     --logo-ratio: 1600/900;
@@ -12,6 +20,97 @@
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+}
+
+html {
+    font-family: var(--fontfamily-textos);
+}
+
+.pinto-shutter-in-vertical,
+h3 {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: var(--color-logo-secundario);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e1e1e1;
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: white;
+
+        &:hover::before,
+        &:focus::before,
+        &:active::before {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+}
+
+/* .pinto-underline a con esta construción estamos diciendo que la clase se aplique a los descendientes de la clase .pinto-underline que sean a. Es decir, hay que escribir la clase en todos los enlaces. */
+
+.pinto-underline,
+a,
+abbr {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: var(--color-logo-secundario);
+        height: 3px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+        left: 0;
+        right: 0;
+    }
 }
 
 .agua {
@@ -47,6 +146,26 @@ main {
 
 main > section > article {
     padding: 7.5vw;
+}
+
+body,
+p,
+li,
+span {
+    color: var(--color-texto);
+}
+
+h3 {
+    color: var(--color-logo-principal);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-a);
+
+    &:hover {
+        color: var(--color-a--hover);
+    }
 }
 
 /* Ejemplo de uso de la pseudoclase :no() */
@@ -166,7 +285,7 @@ ul.enlaces-pdf {
         /* margin: 1em 0; */
         line-height: 2;
 
-        & a {
+        /* & a {
             text-decoration: none;
             color: var(--color-a);
             font-family: impact;
@@ -176,11 +295,11 @@ ul.enlaces-pdf {
                 color: #fff;
                 background-color: var(--color-a--hover);
                 padding: 10px;
-                /* margin: 50px; */
-                border: 3px solid rgb(128, 73, 0);
+                
+                border: 3px solid var(--color-logo-secundario);
                 font-family: impact;
             }
-        }
+        } */
     }
 }
 
