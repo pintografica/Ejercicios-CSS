@@ -4,6 +4,7 @@
     --color-a--hover: #ff00aa80;
     --color-logo-principal: #f55992;
     --color-logo-secundario: #54e899;
+    --bg-h2-color-secundario: #54e89990;
 
     --color-texto: #2b2729;
     --color-logo-acento: #f797c7;
@@ -209,8 +210,7 @@ header.portada {
         padding: 1em;
         text-align: center;
         color: #fff;
-        background-color: var(--color-logo-secundario);
-        opacity: 80%;
+        background-color: var(--bg-h2-color-secundario);
     }
 }
 
@@ -340,6 +340,21 @@ ul.enlaces-pdf {
             content: "Regla activa: @media (min-width: 1024px) → monitor";
         }
     } /* rosa claro */
+}
+
+.pinto-transicion-color {
+    width: 25vw;
+    height: 25vw;
+    background-color: #f55992;
+    box-shadow: none;
+    transition:
+        background-color 0.2 ease,
+        box-shadow 0.2 ease;
+
+    &:hover {
+        background-color: #54e899;
+        box-shadow: 0 4px 12px #2b2729;
+    }
 }
 
 /* a:hover.sobre{
