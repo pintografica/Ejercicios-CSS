@@ -358,12 +358,14 @@ ul.enlaces-pdf {
         background-color: #54e899;
         /* box-shadow: 0 4px 12px #2b2729; Esta propiedad el primer valor es el eje x y el segundo valor es el y */
         box-shadow:
-        #c8c80080 -5px -5px 20px 0px,
-        #00000080 0px 13px 20px 0px, 
-        #c8000080 8px -8px 10px 0px;
-  
-}
+            #c8c80080 -5px -5px 20px 0px,
+            #00000080 0px 13px 20px 0px,
+            #c8000080 8px -8px 10px 0px;
     }
+}
+
+.pinto-mayusculas {
+    text-transform: uppercase;
 }
 
 /* a:hover.sobre{
