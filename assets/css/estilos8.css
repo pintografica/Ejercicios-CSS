@@ -31,6 +31,8 @@
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg"); */
 
+    --img-avatar: url("../img/ilustración-pintografica.webp");
+
     --galeria-1--large: url("../img/concept-900.webp");
     --galeria-1--medium: url("../img/concept-600.webp");
     --galeria-1--thumb: url("../img/concept-300.webp");
@@ -543,7 +545,8 @@ header.portada {
     &::before {
         background-image: var(--portada-medium);
         /* En el inspector de google podemos mirar los demás filtros que hay y cómo se modifican */
-        filter: blur(1px) hue-rotate(36deg) drop-shadow(2px 4px 6px black);
+        filter: blur(1px) hue-rotate(36deg);
+        box-shadow: 2px 4px 6px black;
     }
 }
 
