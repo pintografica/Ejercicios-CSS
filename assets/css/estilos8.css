@@ -14,12 +14,14 @@
     --fontfamily-textos: "Montserrat", sans-serif;
 
     /* Logo del sitio */
-    --bg-img-logo: url("assets/svg/logopintografica.svg");
+    --bg-img-logo: url("../svg/logopintografica.svg");
     --logo-ratio: 1600/900;
     --marca-agua-h: 5rem;
 
     /* Portada del sitio */
-    --bg-url-portada: url("../img/codigo-portada.webp");
+    --portada-thumb: url("../img/codigo-portada-300.webp");
+    --portada-medium: url("../img/codigo-portada-600.webp");
+    --portada-large: url("../img/codigo-portada-900.webp");
 
     /* Imágenes del sitio */
     /* --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
@@ -221,17 +223,9 @@ figure {
 
 header.portada {
     height: 40vh;
-
-    &::before {
-        background-image: var(--bg-url-portada);
-    }
-}
-
-header.portada {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
 
     & h2 {
         position: relative;
@@ -540,6 +534,30 @@ ul.galeria {
             &::before {
                 background-image: var(--galeria-5--large);
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-thumb);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-medium);
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-large);
         }
     }
 }
