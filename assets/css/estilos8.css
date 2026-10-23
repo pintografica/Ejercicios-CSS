@@ -441,6 +441,37 @@ ul.enlaces-pdf {
   border: 3px solid rgb(128, 73, 0);
   font-family:impact;}   */
 
+/* Aquí empieza la galeria */
+ul.galeria {
+    & .diapositiva-1 {
+        &::before {
+            background-image: var(--galeria-1--thumb);
+        }
+    }
+    & .diapositiva-2 {
+        &::before {
+            background-image: var(--galeria-2--thumb);
+        }
+    }
+
+    & .diapositiva-3 {
+        &::before {
+            background-image: var(--galeria-3--thumb);
+        }
+    }
+    & .diapositiva-4 {
+        &::before {
+            background-image: var(--galeria-4--thumb);
+        }
+    }
+
+    & .diapositiva-5 {
+        &::before {
+            background-image: var(--galeria-5--thumb);
+        }
+    }
+}
+
 /*Aquí agregamos las media quaries para hacer el diseño responsive  */
 
 @media (min-width: 700px) {
@@ -448,7 +479,7 @@ ul.enlaces-pdf {
         background-color: var(--color-logo-acento);
     }
     .ul.galeria {
-        &.diapositiva-1 {
+        & .diapositiva-1 {
             &::before {
                 background-image: var(--galeria-1--medium);
             }
@@ -483,7 +514,7 @@ ul.enlaces-pdf {
         background-color: transparent;
     }
     .ul.galeria {
-        &.diapositiva-1 {
+        & .diapositiva-1 {
             &::before {
                 background-image: var(--galeria-1--large);
             }
@@ -509,37 +540,6 @@ ul.enlaces-pdf {
             &::before {
                 background-image: var(--galeria-5--large);
             }
-        }
-    }
-}
-
-/* Aquí empieza la galeria */
-ul.galeria {
-    .diapositiva-1 {
-        &::before {
-            background-image: var(--galeria-1--thumb);
-        }
-    }
-    .diapositiva-2 {
-        &::before {
-            background-image: var(--galeria-2--thumb);
-        }
-    }
-
-    .diapositiva-3 {
-        &::before {
-            background-image: var(--galeria-3--thumb);
-        }
-    }
-    .diapositiva-4 {
-        &::before {
-            background-image: var(--galeria-4--thumb);
-        }
-    }
-
-    .diapositiva-5 {
-        &::before {
-            background-image: var(--galeria-5--thumb);
         }
     }
 }
