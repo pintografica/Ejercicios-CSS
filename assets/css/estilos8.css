@@ -19,6 +19,7 @@
     --marca-agua-h: 5rem;
 
     /* Portada del sitio */
+    --portada-original: url("../img/codigo-portada.webp");
     --portada-thumb: url("../img/codigo-portada-300.webp");
     --portada-medium: url("../img/codigo-portada-600.webp");
     --portada-large: url("../img/codigo-portada-900.webp");
@@ -538,26 +539,24 @@ ul.galeria {
     }
 }
 
-@media (max-width: 600px) {
-    header.portada {
-        &::before {
-            background-image: var(--portada-thumb);
-        }
+header.portada {
+    &::before {
+        background-image: var(--portada-medium);
     }
 }
 
-@media (max-width: 900px) {
-    header.portada {
-        &::before {
-            background-image: var(--portada-medium);
-        }
-    }
-}
-
-@media (max-width: 1280px) {
+@media (min-width: 600px) {
     header.portada {
         &::before {
             background-image: var(--portada-large);
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada-original);
         }
     }
 }
