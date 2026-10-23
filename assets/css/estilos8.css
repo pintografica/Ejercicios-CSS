@@ -478,7 +478,7 @@ ul.galeria {
     article.galeria-flex {
         background-color: var(--color-logo-acento);
     }
-    .ul.galeria {
+    ul.galeria {
         & .diapositiva-1 {
             &::before {
                 background-image: var(--galeria-1--medium);
@@ -513,7 +513,7 @@ ul.galeria {
     article.galeria-flex {
         background-color: transparent;
     }
-    .ul.galeria {
+    ul.galeria {
         & .diapositiva-1 {
             &::before {
                 background-image: var(--galeria-1--large);
