@@ -9,18 +9,44 @@
     --color-texto: #2b2729;
     --color-logo-acento: #f797c7;
 
+    /* Tipografía del sitio */
     --fontfamily-titles: "Titan One", sans-serif;
     --fontfamily-textos: "Montserrat", sans-serif;
 
+    /* Logo del sitio */
     --bg-img-logo: url("assets/svg/logopintografica.svg");
     --logo-ratio: 1600/900;
     --marca-agua-h: 5rem;
-    --bg-url-portada: url("https://images.pexels.com/photos/1921326/pexels-photo-1921326.jpeg");
+
+    /* Portada del sitio */
+    --bg-url-portada: url("../img/codigo-portada.webp");
+
+    /* Imágenes del sitio */
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+
+    --galeria-1--large: url("../img/concept-900.webp");
+    --galeria-1--medium: url("../img/concept-600.webp");
+    --galeria-2--thumb: url("../img/book-300.webp");
+
+    --galeria-2--large: url("../img/book-900.webp");
+    --galeria-2--medium: url("../img/book-600.webp");
+    --galeria-2--thumb: url("../img/book-300.webp");
+
+    --galeria-3--large: url("../img/office-900.webp");
+    --galeria-3--medium: url("../img/office-600.webp");
+    --galeria-3--thumb: url("../img/office-300.webp");
+
+    --galeria-4--large: url("../img/pantone-900.webp");
+    --galeria-4--medium: url("../img/pantone-600.webp");
+    --galeria-4--thumb: url("../img/pantone-300.webp");
+
+    --galeria-5--large: url("../img/tablet-900.webp");
+    --galeria-5--medium: url("../img/tablet-600.webp");
+    --galeria-5--thumb: url("../img/tablet-300.webp");
 }
 
 html {
