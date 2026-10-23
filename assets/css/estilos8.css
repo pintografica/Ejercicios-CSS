@@ -22,15 +22,15 @@
     --bg-url-portada: url("../img/codigo-portada.webp");
 
     /* Imágenes del sitio */
-    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    /* --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
-    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg"); */
 
     --galeria-1--large: url("../img/concept-900.webp");
     --galeria-1--medium: url("../img/concept-600.webp");
-    --galeria-2--thumb: url("../img/book-300.webp");
+    --galeria-1--thumb: url("../img/concept-300.webp");
 
     --galeria-2--large: url("../img/book-900.webp");
     --galeria-2--medium: url("../img/book-600.webp");
@@ -205,6 +205,10 @@ a {
     padding: 0;
 } */
 
+article.galeria-flex {
+    background-color: #54e899;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -289,34 +293,6 @@ ul.galeria {
 ul.galeria figure.galeria-before {
     width: 100%;
     height: 100%;
-}
-
-.diapositiva-1 {
-    &::before {
-        background-image: var(--bg-img-galeria-1);
-    }
-}
-.diapositiva-2 {
-    &::before {
-        background-image: var(--bg-img-galeria-2);
-    }
-}
-
-.diapositiva-3 {
-    &::before {
-        background-image: var(--bg-img-galeria-3);
-    }
-}
-.diapositiva-4 {
-    &::before {
-        background-image: var(--bg-img-galeria-4);
-    }
-}
-
-.diapositiva-5 {
-    &::before {
-        background-image: var(--bg-img-galeria-5);
-    }
 }
 
 ul.enlaces-pdf {
@@ -464,3 +440,106 @@ ul.enlaces-pdf {
     margin: 50px; 
   border: 3px solid rgb(128, 73, 0);
   font-family:impact;}   */
+
+/*Aquí agregamos las media quaries para hacer el diseño responsive  */
+
+@media (min-width: 700px) {
+    article.galeria-flex {
+        background-color: var(--color-logo-acento);
+    }
+    .ul.galeria {
+        &.diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--medium);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--medium);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--medium);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--medium);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--medium);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    article.galeria-flex {
+        background-color: transparent;
+    }
+    .ul.galeria {
+        &.diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--large);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--large);
+            }
+        }
+
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--large);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--large);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--large);
+            }
+        }
+    }
+}
+
+/* Aquí empieza la galeria */
+ul.galeria {
+    .diapositiva-1 {
+        &::before {
+            background-image: var(--galeria-1--thumb);
+        }
+    }
+    .diapositiva-2 {
+        &::before {
+            background-image: var(--galeria-2--thumb);
+        }
+    }
+
+    .diapositiva-3 {
+        &::before {
+            background-image: var(--galeria-3--thumb);
+        }
+    }
+    .diapositiva-4 {
+        &::before {
+            background-image: var(--galeria-4--thumb);
+        }
+    }
+
+    .diapositiva-5 {
+        &::before {
+            background-image: var(--galeria-5--thumb);
+        }
+    }
+}
