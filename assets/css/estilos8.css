@@ -487,8 +487,24 @@ article.carrousel-container {
             flex-shrink: 0;
 
             & figure {
+                position: relative;
                 width: 100%;
                 height: 100%;
+
+                & figcaption {
+                    /* Ubicar el texto abajo centrado */
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+
+                    padding: 1.5em;
+                    padding-bottom: 2em;
+
+                    /* Degradado de negro a nada desde abajo */
+                    background: linear-gradient(to top, #00000080, transparent);
+                    color: #fff;
+                }
             }
         }
 
