@@ -52,6 +52,38 @@
     --galeria-5--large: url("../img/tablet-900.webp");
     --galeria-5--medium: url("../img/tablet-600.webp");
     --galeria-5--thumb: url("../img/tablet-300.webp");
+
+    /* Imágenes de Carrusel gracias a https://pixfill.dev */
+
+    --carrousel-1-origin: url("https://pixfill.dev/1920x1280/d265b5/ffffff");
+    --carrousel-1-large: url("https://pixfill.dev/1024x683/d265b5/ffffff");
+    --carrousel-1-medium-large: url("https://pixfill.dev/768x512/d265b5/ffffff");
+    --carrousel-1-medium: url("https://pixfill.dev/480x320/d265b5/ffffff");
+    --carrousel-1-thumb: url("https://pixfill.dev/300x200/d265b5/ffffff0");
+
+    --carrousel-2-origin: url("https://pixfill.dev/1920x1280/65cbd2/ffffff");
+    --carrousel-2-large: url("https://pixfill.dev/1024x683/65cbd2/ffffff");
+    --carrousel-2-medium-large: url("https://pixfill.dev/768x512/65cbd2/ffffff");
+    --carrousel-2-medium: url("https://pixfill.dev/480x320/65cbd2/ffffff");
+    --carrousel-2-thumb: url("https://pixfill.dev/300x200/65cbd2/ffffff");
+
+    --carrousel-3-origin: url("https://pixfill.dev/1920x1280/8665d2/ffffff");
+    --carrousel-3-large: url("https://pixfill.dev/1024x683/8665d2/ffffff");
+    --carrousel-3-medium-large: url("https://pixfill.dev/768x512/8665d2/ffffff");
+    --carrousel-3-medium: url("https://pixfill.dev/480x320/8665d2/ffffff");
+    --carrousel-3-thumb: url("https://pixfill.dev/300x200/8665d2/ffffff");
+
+    --carrousel-4-origin: url("https://pixfill.dev/1920x1280/65d27b/ffffff");
+    --carrousel-4-large: url("https://pixfill.dev/1024x683/65d27b/ffffff");
+    --carrousel-4-medium-large: url("https://pixfill.dev/768x512/65d27b/ffffff");
+    --carrousel-4-medium: url("https://pixfill.dev/480x320/65d27b/ffffff");
+    --carrousel-4-thumb: url("https://pixfill.dev/300x200/65d27b/ffffff");
+
+    --carrousel-5-origin: url("https://pixfill.dev/1920x1280/d28065/ffffff");
+    --carrousel-5-large: url("https://pixfill.dev/1024x683/d28065/ffffff");
+    --carrousel-5-medium-large: url("https://pixfill.dev/768x512/d28065/ffffff");
+    --carrousel-5-medium: url("https://pixfill.dev/480x320/d28065/ffffff");
+    --carrousel-5-thumb: url("https://pixfill.dev/300x200/d28065/ffffff");
 }
 
 html {
@@ -430,6 +462,28 @@ ul.enlaces-pdf {
         }
     }
 }
+
+/* Aquí empieza el carrusel */
+
+article.carrousel-container {
+    min-height: 100vh;
+
+    & ul.carrousel {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        & li figure {
+            background: #54e899;
+        }
+
+        & li figure.diapositiva-1::before {
+            background-image: var(--carrousel-1-thumb);
+        }
+    }
+}
+
 /* a:hover.sobre{
   color:#fff;
   background-color: var(--color-a--hover);
@@ -565,3 +619,24 @@ header.portada {
         }
     }
 }
+
+/* .ilustracion {
+    &::before
+    background-image: var(--img-avatar);
+}
+
+.avatar-pintografica {
+    position: relative;
+    background-color: black;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+}  */
