@@ -59,7 +59,7 @@
     --carrousel-1-large: url("https://pixfill.dev/1024x683/d265b5/ffffff");
     --carrousel-1-medium-large: url("https://pixfill.dev/768x512/d265b5/ffffff");
     --carrousel-1-medium: url("https://pixfill.dev/480x320/d265b5/ffffff");
-    --carrousel-1-thumb: url("https://pixfill.dev/300x200/d265b5/ffffff0");
+    --carrousel-1-thumb: url("https://pixfill.dev/300x200/d265b5/ffffff");
 
     --carrousel-2-origin: url("https://pixfill.dev/1920x1280/65cbd2/ffffff");
     --carrousel-2-large: url("https://pixfill.dev/1024x683/65cbd2/ffffff");
@@ -471,15 +471,26 @@ article.carrousel-container {
     & ul.carrousel {
         margin: 0;
         padding: 0;
-
         list-style: none;
 
-        & li figure {
-            background: #54e899;
+        & li:nth-child(1) figure::before {
+            background-image: var(--carrousel-1-thumb);
         }
 
-        & li figure.diapositiva-1::before {
-            background-image: var(--carrousel-1-thumb);
+        & li:nth-child(2) figure::before {
+            background-image: var(--carrousel-2-thumb);
+        }
+
+        & li:nth-child(3) figure::before {
+            background-image: var(--carrousel-3-thumb);
+        }
+
+        & li:nth-child(4) figure::before {
+            background-image: var(--carrousel-4-thumb);
+        }
+
+        & li:nth-child(5) figure::before {
+            background-image: var(--carrousel-5-thumb);
         }
     }
 }
