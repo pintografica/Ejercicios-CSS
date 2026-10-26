@@ -553,6 +553,50 @@ ul.galeria {
     }
 }
 
+/* Animación */
+
+ul.carrousel {
+    & li {
+        /* Nombre duración y curva */
+        animation: pinto-animacion 20s infinite ease-in-out;
+
+        /* Avisa al navegador para que use la aceleración por GPU */
+        will-change: transform;
+    }
+
+    &:hover li {
+        /* Pausar animación al pasar el cursor sobre la galería */
+        animation-play-state: paused;
+    }
+}
+
+/* --- Keyframes para el desplazamiento con Flexbox --- */
+@keyframes pinto-animacion {
+    0%,
+    15% {
+        transform: translate3d(0%, 0, 0);
+    }
+    20%,
+    35% {
+        transform: translate3d(-100%, 0, 0);
+    }
+    40%,
+    55% {
+        transform: translate3d(-200%, 0, 0);
+    }
+    60%,
+    75% {
+        transform: translate3d(-300%, 0, 0);
+    }
+    80%,
+    95% {
+        transform: translate3d(-400%, 0, 0);
+    }
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
 /*Aquí agregamos las media quaries para hacer el diseño responsive  */
 
 @media (min-width: 700px) {
