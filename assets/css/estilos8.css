@@ -67,6 +67,13 @@ body {
     }
 }
 
+body > header,
+body > nav.principal {
+    position: fixed;
+    top: 0;
+    height: 3.5rem;
+}
+
 body > header {
     display: flex;
     align-items: center;
