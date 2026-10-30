@@ -166,12 +166,12 @@ nav.principal {
         color: #fff;
     }
 
-    background-color: var(--color-logo-principal);
+    background-color: var(--color-logo-acento);
     font-size: 1.3em;
     color: #fff;
 
     & > ul {
-        background-color: var(--color-logo-principal);
+        background-color: var(--color-logo-acento);
         color: #fff;
 
         & li > ul {
