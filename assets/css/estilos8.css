@@ -80,12 +80,15 @@ body > header {
             background-repeat: no-repeat;
             background-position: 50% 50%;
             background-size: cover;
+            background-attachment: scroll;
+            background-origin: border-box;
+            filter: none;
         }
     }
 }
 
 body > nav {
-    left: 0;
+    /* left: 0; */
     width: 100%;
 }
 
