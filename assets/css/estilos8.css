@@ -1,37 +1,59 @@
-.agua {
-    /*  Al estar en "fixed" la position de la imagen en el "before" no es necesario poner "position: relative" porque lo ignora. 
-    position: relative;  */
-
-    &::before {
-        /* Fija por encima de cualquier position */
-        position: fixed;
-        content: "";
-        width: calc(var(--marca-agua-h) * var(--logo-ratio));
-        height: var(--marca-agua-h);
-
-        /* Esta es la fórmula para calcular el ratio que siempre debemos hacerlo para insertar un logo. Hacemos la variable para el height donde ponemos el tamaño que queremos para el logo en rem, por ejemplo 5rem. Luego calculamos el height por los valores del ratio que sería el width="1600" y el height="900" de nuestro logo en svg. 
-        width: calc(var(--marca-agua-h) * var(--logo-ratio));
-        height: var(--marca-agua-h); */
-
-        right: 1rem;
-        bottom: 1em;
-
-        background-image: var(--bg-img-logo);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        opacity: 0.5;
-        /* background-attachment: fixed; */
-    }
-}
-
 main {
     min-height: 100vh;
 }
 
-main > section > article {
-    padding: 7.5vw;
+body {
+    & > header {
+        padding-left: 4vw;
+    }
+
+    & nav.principal {
+        padding-right: 4vw;
+    }
+
+    & main > section > article {
+        padding: 5vh;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
 }
+
+@media (min-width: 700px) {
+    body {
+        & > header {
+            padding-left: 7.5vw;
+        }
+
+        & nav.principal {
+            padding-right: 7.5vw;
+        }
+
+        & main > section > article {
+            padding-left: 7.5vw;
+            padding-right: 7.5vw;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        & > header {
+            padding-left: 10vw;
+        }
+
+        & nav.principal {
+            padding-right: 10vw;
+        }
+
+        & main > section > article {
+            padding-left: 10vw;
+            padding-right: 10vw;
+        }
+    }
+}
+
+/* Fin de la maquetación 
+_____________________________________________________________________ */
 
 body,
 p,
