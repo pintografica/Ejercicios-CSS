@@ -1,13 +1,3 @@
-html {
-    font-family: var(--fontfamily-textos);
-}
-
-h2,
-h3 {
-    font-family: var(--fontfamily-titles);
-    font-size: 1.5em;
-}
-
 /* .pinto-underline a con esta construción estamos diciendo que la clase se aplique a los descendientes de la clase .pinto-underline que sean a. Es decir, hay que escribir la clase en todos los enlaces. */
 
 .pinto-underline,
@@ -136,7 +126,6 @@ header.portada {
         text-align: center;
         color: #fff;
         background-color: var(--color-logo-principal);
-        font-size: 3em;
 
         &:hover {
             background-color: var(--bg-h2-color-secundario);
