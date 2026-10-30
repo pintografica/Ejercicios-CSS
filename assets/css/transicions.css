@@ -128,7 +128,8 @@ h3 {
 /* .pinto-underline a con esta construción estamos diciendo que la clase se aplique a los descendientes de la clase .pinto-underline que sean a. Es decir, hay que escribir la clase en todos los enlaces. */
 
 .pinto-underline,
-a,
+/* Para que no afecte a todos los enlaces debo colocar el :not y entre parentesis la clase que aplicaré a los (a) para que no salga en los enlaces del logo u otros */
+a:not(.no-border),
 abbr {
     display: inline-block;
     vertical-align: middle;
