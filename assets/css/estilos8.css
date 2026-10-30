@@ -55,15 +55,38 @@ body {
 /* Fin de la maquetación 
 _____________________________________________________________________ */
 
-body,
-p,
-li,
-span {
-    color: var(--color-texto);
+/* CABECERA DEL SITIO */
+
+body {
+    position: relative;
+    & > header {
+        z-index: 3;
+    }
+    & > nav {
+        z-index: 2;
+    }
 }
 
-h3 {
-    color: var(--color-logo-principal);
+body > header {
+    display: flex;
+    align-items: center;
+
+    & a {
+        & figure.logo {
+            background-image: var(--bg-img-logo);
+            height: 3em;
+            width: calc(3em * 1600 / 900);
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+
+body > nav {
+    left: 0;
+    width: 100%;
 }
 
 a {
