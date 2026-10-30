@@ -182,6 +182,7 @@ header.portada {
         text-align: center;
         color: #fff;
         background-color: var(--color-logo-principal);
+        font-size: 2em;
 
         &:hover {
             background-color: var(--bg-h2-color-secundario);
@@ -575,3 +576,15 @@ header.portada {
         
     }
 }  */
+
+nav.principal > ul {
+    background-color: var(--color-logo-principal);
+    font-size: 1.5em;
+
+    & li {
+        background-color: var(--color-logo-principal);
+        & a {
+            color: #fff;
+        }
+    }
+}
