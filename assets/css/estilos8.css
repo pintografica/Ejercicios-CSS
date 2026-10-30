@@ -470,8 +470,9 @@ article.carrousel-container {
 
     & ul.carrousel {
         display: flex;
-        height: 30vh;
-        margin: 0;
+        width: 100%;
+        /* height: 30vh; */
+        margin: 0 auto;
         padding: 0;
         /* overflow: El contenedor recorta todo lo que sobresale. */
         overflow: hidden;
@@ -488,6 +489,7 @@ article.carrousel-container {
             & figure {
                 width: 100%;
                 height: 100%;
+                aspect-ratio: 3/2;
 
                 & figcaption {
                     /* Ubicar el texto abajo centrado */
@@ -535,6 +537,14 @@ article.carrousel-container {
     }
 }
 
+@media (orientation: landscape) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 60%;
+        }
+    }
+}
+
 @media (min-width: 480px) {
     article.carrousel-container {
         & ul.carrousel {
@@ -564,6 +574,7 @@ article.carrousel-container {
 @media (min-width: 768px) {
     article.carrousel-container {
         & ul.carrousel {
+            width: 90%;
             & li:nth-child(1) figure::before {
                 background-image: var(--carrousel-1-medium-large);
             }
@@ -616,6 +627,7 @@ article.carrousel-container {
 @media (min-width: 1920px) {
     article.carrousel-container {
         & ul.carrousel {
+            width: 60%;
             & li:nth-child(1) figure::before {
                 background-image: var(--carrousel-1-origin);
             }
