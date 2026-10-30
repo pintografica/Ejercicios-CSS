@@ -124,3 +124,41 @@ h3 {
             #c8000080 8px -8px 10px 0px;
     }
 }
+
+/* .pinto-underline a con esta construción estamos diciendo que la clase se aplique a los descendientes de la clase .pinto-underline que sean a. Es decir, hay que escribir la clase en todos los enlaces. */
+
+.pinto-underline,
+a,
+abbr {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: var(--color-logo-secundario);
+        height: 3px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+        left: 0;
+        right: 0;
+    }
+}
