@@ -10,6 +10,13 @@ html {
     font-size: 1.2em;
 }
 
+body,
+p,
+li,
+span {
+    color: var(--color-texto);
+}
+
 /* Títulos */
 
 h1,
@@ -23,10 +30,12 @@ h6 {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h3 {
+    color: var(--color-logo-principal);
+
     &::first-letter {
         color: var(--color-logo-acento);
     }
