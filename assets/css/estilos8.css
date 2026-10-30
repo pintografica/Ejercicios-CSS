@@ -2,56 +2,10 @@ html {
     font-family: var(--fontfamily-textos);
 }
 
-.pinto-shutter-in-vertical,
+h2,
 h3 {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    background: var(--color-logo-secundario);
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    border-radius: 8px;
-    padding: 0.5em;
-
-    &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #e1e1e1;
-        -webkit-transform: scaleY(1);
-        transform: scaleY(1);
-        -webkit-transform-origin: 50%;
-        transform-origin: 50%;
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-        border-radius: 8px;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: white;
-
-        &:hover::before,
-        &:focus::before,
-        &:active::before {
-            -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-        }
-    }
+    font-family: var(--fontfamily-titles);
+    font-size: 1.5em;
 }
 
 /* .pinto-underline a con esta construción estamos diciendo que la clase se aplique a los descendientes de la clase .pinto-underline que sean a. Es decir, hay que escribir la clase en todos los enlaces. */
@@ -182,7 +136,7 @@ header.portada {
         text-align: center;
         color: #fff;
         background-color: var(--color-logo-principal);
-        font-size: 2em;
+        font-size: 3em;
 
         &:hover {
             background-color: var(--bg-h2-color-secundario);
@@ -299,81 +253,8 @@ ul.enlaces-pdf {
     } /* rosa claro */
 }
 
-.pinto-transicion-color {
-    width: 50%;
-    height: 50%;
-    background-color: #f55992;
-    box-shadow: none;
-    transition:
-        background-color 2s ease,
-        width 2s ease,
-        box-shadow 2s ease;
-    border-radius: 10px;
-
-    &:hover {
-        width: 100%;
-        background-color: #54e899;
-        /* box-shadow: 0 4px 12px #2b2729; Esta propiedad el primer valor es el eje x y el segundo valor es el y */
-        box-shadow:
-            #c8c80080 -5px -5px 20px 0px,
-            #00000080 0px 13px 20px 0px,
-            #c8000080 8px -8px 10px 0px;
-    }
-}
-
 .pinto-mayusculas {
     text-transform: uppercase;
-}
-
-.pinto-demo {
-    background: var(--color-logo-principal);
-    border: 1px solid #d9deea;
-    border-radius: 12px;
-    padding: 1.2rem;
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-
-    & li {
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.4rem;
-        padding: 2rem;
-        background: #eef2ff;
-        border-radius: 10px;
-        font-size: 0.8rem;
-        color: #55607a;
-
-        & span {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 10px;
-            background: var(--color-logo-acento);
-            color: #fff;
-            display: grid;
-            place-items: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            transition: transform 0.2s ease;
-        }
-
-        &:hover span {
-            &.pinto-translate {
-                transform: translate(5rem, 5rem);
-                background: #54e899;
-            }
-            &.pinto-rotate {
-                transform: rotate(45deg);
-                background: #54e899;
-            }
-            &.pinto-scale {
-                transform: scale(1.5);
-            }
-        }
-    }
 }
 
 /* a:hover.sobre{
@@ -532,15 +413,3 @@ header.portada {
         
     }
 }  */
-
-nav.principal > ul {
-    background-color: var(--color-logo-principal);
-    font-size: 1.5em;
-
-    & li {
-        background-color: var(--color-logo-principal);
-        & a {
-            color: #fff;
-        }
-    }
-}
