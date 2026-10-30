@@ -1,0 +1,187 @@
+/* Aquí empieza el carrusel */
+
+article.carrousel-container {
+    min-height: 100vh;
+
+    & ul.carrousel {
+        display: flex;
+        width: 100%;
+        /* height: 30vh; */
+        margin: 0 auto;
+        padding: 0;
+        /* overflow: El contenedor recorta todo lo que sobresale. */
+        overflow: hidden;
+        list-style: none;
+        border-radius: 0.8rem;
+        box-shadow: 1em 1em 1em #00000080;
+
+        & li {
+            width: 100%;
+            height: 100%;
+            /* Para que no se enconjan las imágenes del figure colocamos el flex-shrink. En los apuntes: normalmente Flexbox encoge los elementos para que quepan todos en el contenedor (5 × 100 % no cabe en 100 %). Por defecto flex-shrink vale 1, y los li se comprimirían hasta ocupar un 20 % cada uno.  */
+            flex-shrink: 0;
+
+            & figure {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 3/2;
+
+                & figcaption {
+                    /* Ubicar el texto abajo centrado */
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 1.5em;
+                    padding-bottom: 2em;
+
+                    text-align: center;
+
+                    /* Degradado de negro a nada desde abajo */
+                    background: linear-gradient(to top, #00000080, transparent);
+                    color: #fff;
+
+                    text-shadow: 1px 1px 2px #000;
+                }
+            }
+        }
+    }
+}
+
+article.carrousel-container {
+    & ul.carrousel {
+        & li:nth-child(1) figure::before {
+            background-image: var(--carrousel-1-thumb);
+        }
+
+        & li:nth-child(2) figure::before {
+            background-image: var(--carrousel-2-thumb);
+        }
+
+        & li:nth-child(3) figure::before {
+            background-image: var(--carrousel-3-thumb);
+        }
+
+        & li:nth-child(4) figure::before {
+            background-image: var(--carrousel-4-thumb);
+        }
+
+        & li:nth-child(5) figure::before {
+            background-image: var(--carrousel-5-thumb);
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1-medium);
+            }
+
+            & li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2-medium);
+            }
+
+            & li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3-medium);
+            }
+
+            & li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4-medium);
+            }
+
+            & li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5-medium);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 90%;
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1-medium-large);
+            }
+
+            & li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2-medium-large);
+            }
+
+            & li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3-medium-large);
+            }
+
+            & li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4-medium-large);
+            }
+
+            & li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5-medium-large);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1-large);
+            }
+
+            & li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2-large);
+            }
+
+            & li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3-large);
+            }
+
+            & li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4-large);
+            }
+
+            & li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5-large);
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    article.carrousel-container {
+        & ul.carrousel {
+            width: 60%;
+            & li:nth-child(1) figure::before {
+                background-image: var(--carrousel-1-origin);
+            }
+
+            & li:nth-child(2) figure::before {
+                background-image: var(--carrousel-2-origin);
+            }
+
+            & li:nth-child(3) figure::before {
+                background-image: var(--carrousel-3-origin);
+            }
+
+            & li:nth-child(4) figure::before {
+                background-image: var(--carrousel-4-origin);
+            }
+
+            & li:nth-child(5) figure::before {
+                background-image: var(--carrousel-5-origin);
+            }
+        }
+    }
+}
